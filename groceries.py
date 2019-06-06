@@ -34,15 +34,20 @@ print(products)
 #conda create -n groceries-env python=3.7 # (first time only) - create environmentw we will use
 #conda activate groceries-env - activate that environemnt 
 
-products_count  = len(products)
+products_count  = len(products) # len helps us count certain parameter
 
 print ("THERE ARE " + str(products_count) + " PRODUCTS")
 
-for p in products: 
+def sort_by_name(any_product): # the p's are seperate for each other if I were to use p
+    return any_product ["name"]
+sorted_products = sorted(products, key=sort_by_name)
+
+
+for p in sorted_products: 
     #print (p["name"])
     #price_usd = p["price"] #$4.99
-    price_usd = "(${0:.2f})".format(p["price"])
-    print (" ... " + p["name"] + "(" + str(price_usd) + ")") # string concatentation allows us to combine items
+    price_usd = " (${0:.2f})".format(p["price"])
+    print (" ... " + p["name"] + price_usd) # string concatentation allows us to combine items - Removed string was similar to(look at 30/35 VS text of video for exercise) " + str(price_usd) +"
 # TypeError: can only concatenate str (not "float") to str - when this error coems up we have to use str as seen above
 
     #"id":1, 
