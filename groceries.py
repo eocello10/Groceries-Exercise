@@ -33,3 +33,47 @@ print(products)
 
 #conda create -n groceries-env python=3.7 # (first time only) - create environmentw we will use
 #conda activate groceries-env - activate that environemnt 
+
+products_count  = len(products)
+
+print ("THERE ARE " + str(products_count) + " PRODUCTS")
+
+for p in products: 
+    #print (p["name"])
+    #price_usd = p["price"] #$4.99
+    price_usd = "(${0:.2f})".format(p["price"])
+    print (" ... " + p["name"] + "(" + str(price_usd) + ")") # string concatentation allows us to combine items
+# TypeError: can only concatenate str (not "float") to str - when this error coems up we have to use str as seen above
+
+    #"id":1, 
+    #"name": "Chocolate Sandwich Cookies", 
+    #"department": "snacks",
+    # "aisle": "cookies cakes",
+    #"price": 3.50}
+     # if we add or subtract products don't want this to be hard coded
+# if products = ID ("1")
+ #   print("Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes")
+
+#--------------")
+#THERE ARE 20 PRODUCTS:
+#--------------
+# + All-Seasons Salt ($4.99)
+# + Chocolate Fudge Layer Cake ($18.50)
+# + Chocolate Sandwich Cookies ($3.50)
+# + Cut Russet Potatoes Steam N' Mash ($4.25)
+# + Dry Nose Oil ($21.99)
+# + Fresh Scent Dishwasher Cleaner ($4.99)
+# + Gluten Free Quinoa Three Cheese & Mushroom Blend ($3.99)
+# + Green Chile Anytime Sauce ($7.99)
+# + Light Strawberry Blueberry Yogurt ($6.50)
+# + Mint Chocolate Flavored Syrup ($4.50)
+# + Overnight Diapers Size 6 ($25.50)
+# + Peach Mango Juice ($1.99)
+# + Pizza For One Suprema Frozen Pizza ($12.50)
+# + Pomegranate Cranberry & Aloe Vera Enrich Drink ($4.25)
+# + Pure Coconut Water With Orange ($3.50)
+# + Rendered Duck Fat ($9.99)
+# + Robust Golden Unsweetened Oolong Tea ($2.49)
+# + Saline Nasal Mist ($16.00)
+# + Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce ($6.99)
+# + Sparkling Orange Juice & Prickly Pear Beverage ($2.99)
