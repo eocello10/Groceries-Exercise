@@ -30,3 +30,6 @@ print(products)
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
+
+#conda create -n groceries-env python=3.7 # (first time only) - create environmentw we will use
+#conda activate groceries-env - activate that environemnt 
