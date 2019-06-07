@@ -36,7 +36,7 @@ print(products)
 
 products_count  = len(products) # len helps us count certain parameter
 
-print ("THERE ARE " + str(products_count) + " PRODUCTS")
+print ("THERE ARE " + str(products_count) + " PRODUCTS") # to print how many products there are
 
 def sort_by_name(any_product): # the p's are seperate for each other if I were to use p
     return any_product ["name"]
@@ -59,6 +59,14 @@ for p in sorted_products:
 # if products = ID ("1")
  #   print("Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes")
 
+
+#Print the number of products. - this is the string concatentation with a more dyanic approach
+#Print the first product.
+#Print the name of the first product.
+#Print the name of each product.
+#Print in alphabetical order the name of each product.
+#Print in alphabetical order the name and price of each product. - this is string concatentation of nam + price with the sort above
+#Print in alphabetical order the name and price of each product, where the price is rounded to two decimal places. - this is the 0:2f item
 #--------------")
 #THERE ARE 20 PRODUCTS:
 #--------------
@@ -82,3 +90,20 @@ for p in sorted_products:
 # + Saline Nasal Mist ($16.00)
 # + Smart Ones Classic Favorites Mini Rigatoni With Vodka Cream Sauce ($6.99)
 # + Sparkling Orange Juice & Prickly Pear Beverage ($2.99)
+
+
+#Department Work
+
+
+Departments = []
+for p in products:
+    #print(p["department"])
+    
+    #Question regarding this don't quite understand it
+    if p["department"] not in Departments:
+        Departments.append(p["department"])
+Departments_count = len(Departments)
+print("There are " + str(Departments_count) + " Departments")
+
+for d in Departments:
+    print(d)
