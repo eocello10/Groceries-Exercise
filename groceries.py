@@ -36,7 +36,7 @@ products = [
 
 products_count  = len(products) # len helps us count certain parameter
 
-print ("THERE ARE " + str(products_count) + " PRODUCTS") # to print how many products there are
+#print ("THERE ARE " + str(products_count) + " PRODUCTS") # to print how many products there are
 
 def sort_by_name(any_product): # the p's are seperate for each other if I were to use p
     return any_product ["name"]
@@ -47,7 +47,7 @@ for p in sorted_products:
     #print (p["name"])
     #price_usd = p["price"] #$4.99
     price_usd = " (${0:.2f})".format(p["price"])
-    print (" ... " + p["name"] + price_usd) # string concatentation allows us to combine items - Removed string was similar to(look at 30/35 VS text of video for exercise) " + str(price_usd) +"
+    #print (" ... " + p["name"] + price_usd) # string concatentation allows us to combine items - Removed string was similar to(look at 30/35 VS text of video for exercise) " + str(price_usd) +"
 # TypeError: can only concatenate str (not "float") to str - when this error coems up we have to use str as seen above
 
     #"id":1, 
