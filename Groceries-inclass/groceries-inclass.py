@@ -43,3 +43,17 @@ print(f"There are {products_count} products:")
 print("--------------")
 #len - length
 
+
+
+for item in products:
+    #print (item)
+   print(f"{item['name']} ... {item['price']}")
+
+
+
+#[] is how you reference any item in a dictionary!!!!!!!!!!
+
+# no choice but to use - products
+#item you can use whatever you want 
+
+# each of these items is a dictionary item - do this by type(item)
