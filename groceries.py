@@ -26,7 +26,7 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print(products)
+#print(products)
 # pprint(products)
 
 # TODO: write some Python code here to produce the desired output
@@ -100,10 +100,23 @@ for p in products:
     #print(p["department"])
     
     #Question regarding this don't quite understand it
-    if p["department"] not in Departments:
+    #if p["department"] not in Departments:
         Departments.append(p["department"])
-Departments_count = len(Departments)
+        # convert list to set remove du[licates vs. using the append function
+
+unique_departments = list(set(Departments)) # see note above. Can use list, set or append to remove duplicates
+
+Departments_count = len(unique_departments)
 print("There are " + str(Departments_count) + " Departments")
 
-for d in Departments:
-    print(d)
+
+unique_departments.sort()
+
+for d in unique_departments:
+    matching_products = [p for p in products if p["department"] == d] # where does d get defined or p for tht matter
+    matching_products_count = len(matching_products)
+    print(d.title() + " (" + str(matching_products_count) + " products)" )
+
+# filtering to perform a count
+
+
