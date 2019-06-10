@@ -33,3 +33,13 @@ pprint(products)
 
 # TODO: write some Python code here to produce the desired output
 
+products_count = len(products)
+
+
+
+#print("There are " + str(products_count) + " products.")
+print(f"There are {products_count} products:")
+# putting f before string is a way to pass certain variables through - need to use curly brackets
+print("--------------")
+#len - length
+
